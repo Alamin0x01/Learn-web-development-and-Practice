@@ -28,5 +28,4 @@ function mindGame(numbers) {
   }
 }
 
-
 console.log(mindGame(-1));
