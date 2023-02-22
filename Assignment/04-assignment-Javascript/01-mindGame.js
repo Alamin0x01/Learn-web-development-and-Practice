@@ -28,4 +28,4 @@ function mindGame(numbers) {
   }
 }
 
-console.log(mindGame(-1)) ;
+console.log(mindGame(-1));
