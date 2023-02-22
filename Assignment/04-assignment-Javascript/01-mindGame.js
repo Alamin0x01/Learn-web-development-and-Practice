@@ -27,5 +27,5 @@ function mindGame(numbers) {
     return "Please Valid Data";
   }
 }
-
+ 
 console.log(mindGame(-1));
