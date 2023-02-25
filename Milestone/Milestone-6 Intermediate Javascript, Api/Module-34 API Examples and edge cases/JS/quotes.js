@@ -12,6 +12,7 @@ const loadQuote = () => {
     // Destructure way
     //   const { quote } = quotes;
     //   blockQuote.innerHTML = quote;
-  };
-  
+  // 
+};
   loadQuote();
+ 

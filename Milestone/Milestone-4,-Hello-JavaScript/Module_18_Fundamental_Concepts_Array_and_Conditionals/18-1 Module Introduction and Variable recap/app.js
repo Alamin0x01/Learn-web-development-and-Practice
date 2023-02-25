@@ -31,3 +31,4 @@ var isSingle = true;
 // toFixed
 
 // remainder: vagses 
+Array, Object
