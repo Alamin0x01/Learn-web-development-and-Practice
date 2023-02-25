@@ -2,7 +2,7 @@ var numbers = [1, 3, 6, 3, 5, 8, 4, 8];
 // console.log(numbers);
 var slices = numbers.slice(3, 6);
 // console.log(slices);
-// console.log("slice " + numbers);
+// console.log("slice " + numbers); 
 
 var names = " Ariana Grande is singing";
 console.log(names.includes("Hello")); // false
