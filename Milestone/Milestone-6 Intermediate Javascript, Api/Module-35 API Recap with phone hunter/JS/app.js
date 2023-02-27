@@ -38,7 +38,7 @@ const displayPhones = (phones, dataLimit ) => {
                     natural lead-in to additional content. This content is a
                     little bit longer.
                   </p>
-                  <button onclick="loadPhoneDetails('${phone.slug}')" href="#" class="btn btn-primary">Show details</button>
+                  <button onclick="loadPhoneDetails('${phone.slug}')" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#phoneDetailsModal">Show details</button>
                 </div>
               </div>
               `;
@@ -83,6 +83,19 @@ const loadPhoneDetails =async id => {
     const url =`https://openapi.programming-hero.com/api/phone/${id}`;
     const res = await fetch (url);
     const data = await res.json();
-    console.log(data);
+    displayPhoneDetails(data.data);
 }
-// loadPhones();
+
+const displayPhoneDetails =phone =>{
+    console.log (phone);
+    const modalTitle =document.getElementById('phoneDetailsModalLabel');
+    modalTitle.innerText =phone.name;
+    const phoneDetails= document.getElementById ('phone-details');
+    phoneDetails.innerHTML=`
+    <P>Release date: ${phone.releaseDate ? phone.releaseDate : 'No release date found'}</P>
+    <P>Storage: ${phone.mainFeatures ? phone.mainFeatures.storage : 'No storage information'}</P>
+    <P>others: ${phone.others ? phone.others.Bluetooth : 'No Bluetooth information'}</P>
+    
+    `;
+}
+loadPhones('apple');
