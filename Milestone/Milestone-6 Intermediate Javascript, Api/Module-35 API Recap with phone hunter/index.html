@@ -13,30 +13,35 @@
   </head>
   <body>
     <header>
-      <h1 class="text-center text-bg-success">API Phone Hunters!</h1>
+      <h1 class="text-center text-success">API Phone Hunters!</h1>
     </header>
     <main class="container">
-        <section>
-            
-                <div class="mb-3 w-50 d-flex">
-                    <div>
-                  <input type="email" id="search-field" class="form-control" id="phone-search" placeholder="search your phone" > </div>
-                  <div>
-                    <button id="btn-search" class="btn btn-primary ">Search</button>
-                </div>
-                  
-                  
-                </div>
-                
-
-            
-        </section>
- <!-- display search  result -->
       <section>
-        <div> 
-          <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
-            
+        <div class="mb-3 w-50 d-flex">
+          <div>
+            <input
+              type=""
+              id="search-field"
+              class="form-control"
+              id="phone-search"
+              placeholder="Search Your Phone"
+            />
           </div>
+          <div>
+            <button id="btn-search" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </section>
+      <!-- display search  result -->
+      <section>
+        <div>
+          <div
+            id="phones-container"
+            class="row row-cols-1 row-cols-md-3 g-4"
+          ></div>
+        </div>
+        <div id="no-phones" class="mt-4 d-none">
+          <h4 class="text-danger">No Phone Found!</h4>
         </div>
       </section>
     </main>

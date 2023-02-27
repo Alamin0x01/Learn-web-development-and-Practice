@@ -7,11 +7,21 @@ const loadPhones = async (searchText) => {
 
 const displayPhones = (phones) => {
   const phoneContainer = document.getElementById("phones-container");
-  phoneContainer.textContent= '';
+  phoneContainer.textContent = "";
+  // display only 20 phones
+  phones = phones.slice(0, 20);
+  // display Phone founds
+  const noPhone = document.getElementById("no-phones");
+  if (phones.length === 0) {
+    noPhone.classList.remove("d-none");
+  } else {
+    noPhone.classList.add("d-none");
+  }
+  // display all Phones
   phones.forEach((phone) => {
-    const phoneDiv = document.createElement('div');
-    phoneDiv.classList.add('col');
-    phoneDiv.innerHTML= `
+    const phoneDiv = document.createElement("div");
+    phoneDiv.classList.add("col");
+    phoneDiv.innerHTML = `
     <div class="card p-4">
                 <img src="${phone.image}" class="card-img-top" alt="..." />
                 <div class="card-body">
@@ -24,14 +34,13 @@ const displayPhones = (phones) => {
                 </div>
               </div>
               `;
-              phoneContainer.appendChild(phoneDiv);
-
+    phoneContainer.appendChild(phoneDiv);
   });
 };
 
-document.getElementById('btn-search').addEventListener('click', function(){
-const searchField = document.getElementById("search-field");
-const searchText = searchField.value;
-loadPhones(searchText);
-})
-loadPhones();
+document.getElementById("btn-search").addEventListener("click", function () {
+  const searchField = document.getElementById("search-field");
+  const searchText = searchField.value;
+  loadPhones(searchText);
+});
+// loadPhones();
