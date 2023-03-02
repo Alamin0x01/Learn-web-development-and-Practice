@@ -8,4 +8,4 @@
 
 5. Difference between git fetch and git pull.
 
-Search in Google for more: git and github interview questions for beginners.
+Search in Google for more: git and github interview questions for beginners. 
