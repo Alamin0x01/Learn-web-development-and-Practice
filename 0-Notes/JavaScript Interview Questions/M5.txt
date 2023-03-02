@@ -1,0 +1,11 @@
+1. What do you understand by the universal sector?
+
+2. Differentiate between the use of ID selector and class selector.
+
+3. How can you use CSS to control image repetition?
+
+4. Are the HTML tags and elements the same thing?
+
+5. Difference between inline, block and inline-block element. Is it possible to change an inline element into a block level element?
+
+Search in Google for more: HTML and CSS interview questions for beginners.

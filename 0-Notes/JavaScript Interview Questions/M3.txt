@@ -1,0 +1,11 @@
+1. What is Git? What are the advantages of using Git?
+
+2. What do you understand by the term ‘Version Control System’?
+
+3. What’s the difference between Git and GitHub?
+
+4. Name a few Git commands with their function.
+
+5. Difference between git fetch and git pull.
+
+Search in Google for more: git and github interview questions for beginners.
