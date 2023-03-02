@@ -14,4 +14,4 @@ console.log(stuInfo.name);
 
 
 
-// alamin
+// al amin
