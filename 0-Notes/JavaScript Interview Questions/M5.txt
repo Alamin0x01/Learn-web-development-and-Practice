@@ -1,6 +1,6 @@
 1. What do you understand by the universal sector?
 
-2. Differentiate between the use of ID selector and class selector.
+2.  Differentiate between the use of ID selector and class selector.
 
 3. How can you use CSS to control image repetition?
 
