@@ -27,7 +27,7 @@ function isBigger(num) {
   for (let i = 0; i < 10; i++) {
     // const n = number[i  // SyntaxError: Unexpected token '}'
     const n = number[i];
-  }
+  } 
   
   // if (numbers.length > 5) && (numbers[0] === 5) {  // SyntaxError: Unexpected token '&&'
   if (numbers.length > 5 && numbers[0] === 5) {
