@@ -28,3 +28,12 @@ else{
 const numbers = [867,45,456 , 56, 76, 687,];
 numbers[0] = 54;
 
+
+
+
+
+//  4. for loop
+for (let i = 0; i < numbers.length; i++){
+    const number =numbers[i];
+    console.log(number);
+}
