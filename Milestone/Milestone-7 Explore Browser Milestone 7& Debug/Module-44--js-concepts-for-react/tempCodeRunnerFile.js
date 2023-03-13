@@ -1,4 +1,3 @@
-products.forEach(product=> {
-
-    const id =document.getElementById(id)
-})
+fetch('url')
+.then(res=> res.json())
+.then(data=>console.log(data));
