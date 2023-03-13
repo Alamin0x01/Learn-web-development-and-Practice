@@ -35,7 +35,7 @@ numbers[0] = 54;
 //  4. for loop
 for (let i = 0; i < numbers.length; i++){
     const number =numbers[i];
-    console.log(number);
+    // console.log(number);
 }
 
 
@@ -53,3 +53,21 @@ const output = multiple(34, 87);
 
 
 
+// 6. object
+//  3 ways to access property by name
+const student ={
+    name: 'Mr. Been',
+    age:32,
+    movies: ['king man', 'super man']
+}
+
+const myVariable = 'age';
+
+// direct by property---
+console.log(student.age); 
+
+// access via property name string
+console.log(student['age']);
+
+// access via property name in a variable
+console.log(student[myVariable]);
