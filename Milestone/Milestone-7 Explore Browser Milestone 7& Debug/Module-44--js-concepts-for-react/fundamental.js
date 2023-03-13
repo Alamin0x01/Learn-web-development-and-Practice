@@ -48,10 +48,6 @@ const myVariable = "age";
 // direct by property---
 console.log(student.age);
 
-
-
-
-
 // access via property name string
 console.log(student["age"]);
 
