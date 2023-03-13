@@ -19,3 +19,19 @@ const doMath = (num1, num2) => {
   const sum = num1 + num2;
   return sum;
 };
+
+// spread operator
+
+const bdTaka = [66, 86, 45, 456, 56, 76, 68];
+const newTaka = [...bdTaka];
+
+// create a new array from an older array and add an element
+const currentBdTaka = [...bdTaka, 55];
+
+bdTaka.push(77);
+bdTaka.push(77);
+bdTaka.push(77);
+
+console.log(bdTaka);
+console.log(newTaka);
+console.log(currentBdTaka);
