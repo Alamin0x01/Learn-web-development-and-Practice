@@ -7,4 +7,15 @@ let season ='rainy';
 season = 'winter';
 
 
-// 
+// 2. conditions
+// 6 basic conditions : > , <, ===, !==,<=, >=
+// multiple conditions : &&, ||
+if (fatherName === 'fine' || season === 'rainy'){
+
+}
+else if (fatherName === 'Fine'){
+
+}
+else{
+    
+}
