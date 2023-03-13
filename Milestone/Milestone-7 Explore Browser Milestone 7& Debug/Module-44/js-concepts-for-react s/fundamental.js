@@ -17,5 +17,14 @@ else if (fatherName === 'Fine'){
 
 }
 else{
-    
+
 }
+
+
+
+// 3. Array declare
+// index,
+// length, push,
+const numbers = [867,45,456 , 56, 76, 687,];
+numbers[0] = 54;
+
