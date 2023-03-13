@@ -19,5 +19,6 @@ console.log(stuInfo.name);
 
 
 
-const name = 'Hero';const age = 34;
+const name = 'Hero';
+const age = 34;
 const person = {name, age}; console.log(person);
