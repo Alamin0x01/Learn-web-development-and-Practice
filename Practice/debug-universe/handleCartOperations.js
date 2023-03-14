@@ -38,7 +38,7 @@ const displayCartItems=()=>{
         <td><span> <i onclick='deleteItemFromCart(${_id})' class="mx-2 bi bi-trash3 text-danger"></i>
         </span> 
         <span> 
-        <i class="text-success bi bi-credit-card-fill" onclick='handlePaymentInfo(${_id})' data-bs-toggle="modal" data-bs-target="#paymenModal" ></i> 
+        <i class="text-success bi bi-credit-card-fill" onclick='handlePaymentInfo(${_id})' data-bs-toggle="modal" data-bs-target="#paymentModal" ></i> 
         </span></td>
        
         </tr>
@@ -51,7 +51,7 @@ displayCartItems()
 
 const deleteItemFromCart=(id)=>{
     const cartItems=getItemsFromStorage()
-    const filteredItems=cartItems.filter((item)=>item._id!=id)
+    const filteredItems=cartItems.filter((item)=>item._id!==id)
     localStorage.setItem('savedCart', JSON.stringify(filteredItems))
     displayCartItems()
 }
