@@ -1,1 +1,25 @@
-Github : https://github.com/Alamin0x01/Learn-web-development-and-Practice.git   
+ Uncaught TypeError: Cannot set properties of null (setting 'innerText')
+    at taglineGenarator.js:18:51
+
+
+এই এরর টা বেশিরভাগ সময় আসে , যখন আপনি কোনো একটা html এলিমেন্ট কে id/class etc দিয়ে এক্সেস করে সেটার টেক্সট বা html কে আপডেট করতে চান ,কিন্তু js ঐ এলিমেন্ট কে এক্সেস করতে পারছে না।  সব চেয়ে ভালো হয় , id বা ক্লাস নাম ঠিক মতো দিয়েছেন কিনা চেক করেন। 
+
+ Uncaught (in promise) TypeError: Cannot read properties of null (reading 'review_scores_accuracy')
+  at HTMLButtonElement.<anonymous> (taglineGenarator.js:64:30)
+
+এই এরর টা আসে যখন আপনি কোনো একটা অবজেক্ট এ একটা প্রপার্টি নাই বা null ভ্যালু আছে  , অথচ আপনি সেই প্রপার্টি থেকে আরো একটা কিছু এক্সেস করতে চাচ্ছেন তখন। যেমন : review_scores.scores.review_scores_accuracy
+
+
+Uncaught ReferenceError: r is not defined
+    at HTMLInputElement.<anonymous> (rooms.js:48:40)
+
+ধরেন আপনি কোনো একটা ভ্যারিয়েবল ব্যবহার করছেন যেটা আপনি ডিক্লেয়ার করেন নি।  তখন এই এরর টা আসবে। 
+
+Uncaught TypeError: cartItems?.forEach is not a function
+    at displayCartItems (handleCartOperations.js:27:16)
+    at handleCartOperations.js:44:1
+
+forEach / map /find /filter এসব হচ্ছে এরে মেথড।  আপনি অন্য কোনো ডাটা টাইপ এর উপর এই মেথড গুলো চালাতে গেলে এই এরর টা দিবে।  কাজেই আগে একবার চেক করে নিবেন আপনি এখানে এরে পাচ্ছেন নাকি একটা অন্য টাইপ এর ডাটা পাচ্ছেন।
+
+
+
