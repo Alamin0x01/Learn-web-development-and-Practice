@@ -3,18 +3,21 @@ const addToCart = async (id) => {
   const result = await data.json();
   const { name, summary, property_type, images,number_of_reviews,price,_id} = result.find((item) => item._id == id);
   const cartItems=getItemsFromStorage()
-  
+  if(cartItems.find(item=>item._id==id)){
+    return
+  }
   
   cartItems.push({ name, summary, property_type, images,number_of_reviews,price,_id});
   localStorage.setItem('saved-Cart', JSON.stringify(cartItems))
   //const cartItemsContainer = document.getElementById("cart-items");
+  displayCartItems()
 };
 
 const getItemsFromStorage = () => {
   let itemsArray = [];
-  const cartItems = localStorage.getItem("savedCart");
+  const cartItems = localStorage.getItem("saved-Cart");
   if (cartItems) {
-    itemsArray = (cartItems);
+    itemsArray = JSON.parse (cartItems);
   }
   return itemsArray;
 };
