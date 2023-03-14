@@ -10,14 +10,14 @@ const addToCart = async (id) => {
   // 
   
   cartItems.push({ name, summary, property_type, images,number_of_reviews,price,_id});
-  localStorage.setItem('saved-Cart', JSON.stringify(cartItems))
+  localStorage.setItem('savedCart', JSON.stringify(cartItems))
   //const cartItemsContainer = document.getElementById("cart-items");
   displayCartItems()
 };
 
 const getItemsFromStorage = () => {
   let itemsArray = [];
-  const cartItems = localStorage.getItem("saved-Cart");
+  const cartItems = localStorage.getItem("savedCart");
   if (cartItems) {
     itemsArray = JSON.parse (cartItems);
   }
@@ -51,7 +51,7 @@ displayCartItems()
 
 const deleteItemFromCart=(id)=>{
     const cartItems=getItemsFromStorage()
-    const filteredItems=cartItems.filter((item)=>item._id!==id)
+    const filteredItems=cartItems.filter((item)=>item._id!=id)
     localStorage.setItem('savedCart', JSON.stringify(filteredItems))
     displayCartItems()
 }
