@@ -93,7 +93,9 @@ const displayPhoneDetails =phone =>{
     const phoneDetails= document.getElementById ('phone-details');
     phoneDetails.innerHTML=`
     <P>Release date: ${phone.releaseDate ? phone.releaseDate : 'No release date found'}</P>
-    <P>Storage: ${phone.mainFeatures ? phone.mainFeatures.storage : 'No storage information'}</P>
+    <P>Storage: ${phone.mainFeatures ?  Object.entries(phone.mainFeatures).map(
+      (item) => "<br/>" + item.join(" : ")
+    ) : 'No storage information'}</P>
     <P>others: ${phone.others ? phone.others.Bluetooth : 'No Bluetooth information'}</P>
     
     `;

@@ -23,6 +23,6 @@ Example: https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-
 5. Search is not clearing previous results
 6. picture of the phones are not showing        (done)
 7. Show All button should be hidden after all data is loaded
-8. Load phone details doesn't display anything
-9. Phone details are added on the modal but this is not getting displayed. why?
-10. Storage on Modal isn't getting displayed properly
+8. Load phone details doesn't display anything    (done)
+9. Phone details are added on the modal but this is not getting displayed. why?  (done)
+10. Storage on Modal isn't getting displayed properly  (done)

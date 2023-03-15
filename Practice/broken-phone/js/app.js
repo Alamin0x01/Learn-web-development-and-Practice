@@ -7,7 +7,7 @@ const loadPhones = async (searchText, dataLimit) => {
 
 const displayPhones = (phones, dataLimit) => {
   const phonesContainer = document.getElementById("phones-container");
-  // phonesContainer.textContent = '';
+  phonesContainer.textContent = "";
   // display 10 phones only
 
   const showAll = document.getElementById("show-all");
@@ -90,14 +90,22 @@ const loadPhoneDetails = async (id) => {
 };
 
 const displayPhoneDetails = (phone) => {
-  console.log(phone);
+  // console.log(phone);
   const modalTitle = document.getElementById("phoneDetailModalLabel");
   modalTitle.innerText = phone.name;
   const phoneDetails = document.getElementById("phone-details");
-  console.log(phone.mainFeatures.sensors[0]);
+  // console.log(phone.mainFeatures.sensors[0]);
   phoneDetails.innerHTML = `
-        <p>Release Date: ${phone.releaseDate}</p>
-        <p>Storage: ${phone.mainFeatures}</p>
+        <p>Release Date: ${
+          phone.releaseDate ? phone.releaseDate : "No release date found"
+        }</p>
+        <p>Storage: ${
+          phone.mainFeatures
+            ? Object.entries(phone.mainFeatures).map(
+                (item) => "<br/>" + item.join(" : ")
+              )
+            : "No storage information"
+        }</p>
         <p>Others: ${
           phone.others ? phone.others.Bluetooth : "No Bluetooth Information"
         }</p>
