@@ -15,7 +15,7 @@ const displayPhones = (phones, dataLimit) => {
     phones = phones.slice(0, 10);
     showAll.classList.remove("d-none");
   } else {
-    showAll.classList.add("d-hidden");
+    showAll.classList.add("d-none");
   }
 
   // display no phones found
@@ -95,15 +95,14 @@ const displayPhoneDetails = (phone) => {
   modalTitle.innerText = phone.name;
   const phoneDetails = document.getElementById("phone-details");
   // console.log(phone.mainFeatures.sensors[0]);
+  console.log(phone.mainFeatures);
   phoneDetails.innerHTML = `
         <p>Release Date: ${
           phone.releaseDate ? phone.releaseDate : "No release date found"
         }</p>
         <p>Storage: ${
           phone.mainFeatures
-            ? Object.entries(phone.mainFeatures).map(
-                (item) => "<br/>" + item.join(" : ")
-              )
+            ? phone.mainFeatures.storage
             : "No storage information"
         }</p>
         <p>Others: ${
