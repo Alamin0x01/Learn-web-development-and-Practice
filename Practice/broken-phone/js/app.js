@@ -69,7 +69,7 @@ document
 
 const toggleSpinner = (isLoading) => {
   const loaderSection = document.getElementById("loader");
-  if (!isLoading) {
+  if (isLoading) {
     loaderSection.classList.remove("d-none");
   } else {
     loaderSection.classList.add("d-none");
