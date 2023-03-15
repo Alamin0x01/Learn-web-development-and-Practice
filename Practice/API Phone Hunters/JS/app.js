@@ -5,18 +5,17 @@ const loadPhones = async (searchText, dataLimit) => {
   displayPhones(data.data, dataLimit);
 };
 
-const displayPhones = (phones, dataLimit ) => {
+const displayPhones = (phones, dataLimit) => {
   const phoneContainer = document.getElementById("phones-container");
   phoneContainer.textContent = "";
   // display only 10 phones
-  const showAll = document.getElementById('show-all');
-  if(dataLimit && phones.length > 10){
-
-      phones = phones.slice(0, 10);
-      showAll.classList.remove('d-none');
+  const showAll = document.getElementById("show-all");
+  if (dataLimit && phones.length > 10) {
+    phones = phones.slice(0, 10);
+    showAll.classList.remove("d-none");
+  } else {
+    showAll.classList.add("d-none");
   }
-  else{showAll.classList.add('d-none');
-}
   // display Phone founds
   const noPhone = document.getElementById("no-phones");
   if (phones.length === 0) {
@@ -44,60 +43,70 @@ const displayPhones = (phones, dataLimit ) => {
               `;
     phoneContainer.appendChild(phoneDiv);
   });
-//   stop loader or spinner
-toggleSpinner(false);
+  //   stop loader or spinner
+  toggleSpinner(false);
 };
-const processSearch = (dataLimit) =>{
-    toggleSpinner(true);
+const processSearch = (dataLimit) => {
+  toggleSpinner(true);
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
   loadPhones(searchText, dataLimit);
-}
-// handle search button click 
+};
+// handle search button click
 document.getElementById("btn-search").addEventListener("click", function () {
-    // start loader
-   processSearch(10);
+  // start loader
+  processSearch(10);
 });
 // search input field enter key handler
-document.getElementById('search-field').addEventListener('keypress', function (e){
-    if (e.key ==='Enter'){
-        processSearch(10);
+document
+  .getElementById("search-field")
+  .addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      processSearch(10);
     }
-})
+  });
 
-const toggleSpinner = isLoading => {
-    const loaderSection =document.getElementById('loader');
-    if(isLoading){
-        loaderSection.classList.remove('d-none')
-    }
-    else{loaderSection.classList.add('d-none');
-}
-}
+const toggleSpinner = (isLoading) => {
+  const loaderSection = document.getElementById("loader");
+  if (isLoading) {
+    loaderSection.classList.remove("d-none");
+  } else {
+    loaderSection.classList.add("d-none");
+  }
+};
 
 // not the best way to load show all
-document.getElementById('btn-show-all').addEventListener('click', function(){
-    processSearch();
-})
+document.getElementById("btn-show-all").addEventListener("click", function () {
+  processSearch();
+});
 
-const loadPhoneDetails =async id => {
-    const url =`https://openapi.programming-hero.com/api/phone/${id}`;
-    const res = await fetch (url);
-    const data = await res.json();
-    displayPhoneDetails(data.data);
-}
+const loadPhoneDetails = async (id) => {
+  const url = `https://openapi.programming-hero.com/api/phone/${id}`;
+  const res = await fetch(url);
+  const data = await res.json();
+  displayPhoneDetails(data.data);
+};
 
-const displayPhoneDetails =phone =>{
-    console.log (phone);
-    const modalTitle =document.getElementById('phoneDetailsModalLabel');
-    modalTitle.innerText =phone.name;
-    const phoneDetails= document.getElementById ('phone-details');
-    phoneDetails.innerHTML=`
-    <P>Release date: ${phone.releaseDate ? phone.releaseDate : 'No release date found'}</P>
-    <P>Storage: ${phone.mainFeatures ?  Object.entries(phone.mainFeatures).map(
-      (item) => "<br/>" + item.join(" : ")
-    ) : 'No storage information'}</P>
-    <P>others: ${phone.others ? phone.others.Bluetooth : 'No Bluetooth information'}</P>
+const displayPhoneDetails = (phone) => {
+  console.log(phone);
+  const modalTitle = document.getElementById("phoneDetailsModalLabel");
+  modalTitle.innerText = phone.name;
+  const phoneDetails = document.getElementById("phone-details");
+  phoneDetails.innerHTML = `
+    <P>Release date: ${
+      phone.releaseDate ? phone.releaseDate : "No release date found"
+    }</P>
+    <P>Storage: ${
+      phone.mainFeatures
+        ? Object.entries(phone.mainFeatures).map(
+            (item) => "<br/>" + item.join(" : ")
+          )
+        : "No storage information"
+    }</P>
+    <P>others: ${
+      phone.others ? phone.others.Bluetooth : "No Bluetooth information"
+    }</P>
     
     `;
-}
-loadPhones('apple');
+};
+loadPhones("apple", 10);
