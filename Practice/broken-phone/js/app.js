@@ -62,7 +62,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
 document
   .getElementById("search-field")
   .addEventListener("keypress", function (e) {
-    if (e.key === "enter") {
+    if (e.key === "Enter") {
       processSearch(10);
     }
   });
