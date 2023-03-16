@@ -87,15 +87,15 @@ const loadPhoneDetails = async (id) => {
   const res = await fetch(url);
   const data = await res.json();
   displayPhoneDetails(data.data);
+  // console.log('data');
 };
-
 const displayPhoneDetails = (phone) => {
   // console.log(phone);
   const modalTitle = document.getElementById("phoneDetailModalLabel");
   modalTitle.innerText = phone.name;
   const phoneDetails = document.getElementById("phone-details");
   // console.log(phone.mainFeatures.sensors[0]);
-  console.log(phone.mainFeatures);
+  // console.log(phone.mainFeatures);
   phoneDetails.innerHTML = `
         <p>Release Date: ${
           phone.releaseDate ? phone.releaseDate : "No release date found"
