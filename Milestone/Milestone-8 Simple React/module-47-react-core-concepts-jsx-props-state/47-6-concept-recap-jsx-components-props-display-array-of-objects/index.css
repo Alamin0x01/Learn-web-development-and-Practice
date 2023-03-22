@@ -1,0 +1,7 @@
+.product {
+  background-color: aqua;
+  padding: 15px;
+  border: 5px solid rgb(85, 2, 2);
+  border-radius: 15px;
+  margin: 20px;
+}
