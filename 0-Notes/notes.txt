@@ -23,3 +23,23 @@ forEach / map /find /filter এসব হচ্ছে এরে মেথড। 
 
 
 
+Join at 11:00 PM https://meet.google.com/swt-avgp-cej
+
+
+
+
+
+যারা বিগিনার আছেন এবং এই ঈদের ছুটিতে চাচ্ছেন যে জাভাস্ক্রিপ্ট রিক্যাপ করতে, তারা চাইলে নিচের টপিকগুলো রিভিশন দিতে পারেনঃ
+01. conditions (if...else, swich-case, ternary operator and short circuiting)
+02. loops (for loop, while loop, for of loop) 
+03. dom manipulations (querySelector, querySelectorAll, dynamic html template building using template literal, add and remove elements, insertAdjacentHTML, insertAdjacentElement, manipulate classes, manipulate styles, event listener, traverse through dom elements, event delegation, event bubbling, event propagation, intersection observer (cool thing))
+04. Spread operators, rest pattern and parameters, destructuring arrays and objects
+05. Functions (function declaration, function expression, arrow function, function calling function, first-class functions, higher order functions, callback functions, currying function, call, apply and bind methods)
+06. JS Engine workflows, scope, scope chain, hoisting, lexical scope and closures, this keyword
+07. Object keys, values and entries, optional chaining
+08. Array methods beside basic operations (forEach, map, filter, find, findIndex, every, some, includes, reduce, slice, splice, reverse, sort (use it if you've small amount of data, otherwise implement a quick sort or other efficient sorting algo.))
+09. Numeric javascript (math, date, parseInt, parseFloat etc.)
+10. Geolocations, matchMedia, mediaDevices, browser storages etc.(optional)
+11. OOP (constructor function, Object.create,  ES6 classes, prototype chain, prototypal inheritance, polymorphism, private fields etc.)
+12. Basic knowledge of project architectures (MVC, MVVM, Layered etc.), System design techniques, modules, bundlers (webpack, parcel, vite), transpiler (babel), polyfilling, testing tools (jest, jasmin, cypress etc.)
+13. AJAX (fetch api, async/await, try-catch, promises, api data modeling, rest api core concepts, event loop, microtask queue, callback queue etc.)
