@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.LazyLoad {
+    opacity: 0;
+    transition: all 2s ease-in-out;
+  }
+  
+  .is-visible {
+    opacity: 1;
+  }
